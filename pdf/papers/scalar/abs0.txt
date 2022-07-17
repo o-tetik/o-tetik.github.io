@@ -1,0 +1,1 @@
+We consider scalar field theory on manifolds with boundary and its BV-BFV-like quantisation purely in the context of factorization algebras and homology. We provide geometric quantization on the boundary in this purely algebraic setting.

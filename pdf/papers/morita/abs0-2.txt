@@ -1,0 +1,1 @@
+Written: basics on stratified factorisation algebras sensitive to tangential structure | appropriate notion of locality | example (variframed) that these are not additive (in the sense of Dunn–Lurie) | first main definition towards collapse maps, shaping the Morita theory with the chosen structure
