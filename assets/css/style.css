@@ -1,0 +1,262 @@
+/*
+ * Newsprint (Barlow), adapted for the web from the Typora theme
+ * ~/.config/Typora/themes/newsprint-barlow.css (which overrides newsprint.css).
+ * Only the rules that style page content are kept; Typora's editor/UI rules
+ * are dropped and its #write container becomes <main>.
+ */
+
+/* Barlow, self-hosted (SIL Open Font License, see ../fonts/LICENSE.txt) */
+@font-face {
+	font-family: 'Barlow';
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+	src: local('Barlow'), local('Barlow-Regular'), url('../fonts/barlow-regular.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Barlow';
+	font-style: italic;
+	font-weight: normal;
+	font-display: swap;
+	src: local('Barlow Italic'), local('Barlow-Italic'), url('../fonts/barlow-italic.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Barlow';
+	font-style: normal;
+	font-weight: bold;
+	font-display: swap;
+	src: local('Barlow Bold'), local('Barlow-Bold'), url('../fonts/barlow-bold.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Barlow';
+	font-style: italic;
+	font-weight: bold;
+	font-display: swap;
+	src: local('Barlow Bold Italic'), local('Barlow-BoldItalic'), url('../fonts/barlow-bolditalic.woff2') format('woff2');
+}
+
+/* colours: light = Newsprint, dark = Newsprint Dark (follows the visitor's system setting) */
+:root {
+	color-scheme: light dark;
+	--bg: #f3f2ee;
+	--text: #1f0909;
+	--link: #065588;
+	--code-bg: #dadada;
+	--rule: #c5c5c5;
+	--quote-rule: #bababa;
+	--quote-text: #656565;
+	--row-alt: #e8e7e7;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #1f0909;
+		--text: #f3f2ee;
+		--link: #4fa8d8;
+		--code-bg: #3a2c2c;
+		--rule: #4a3838;
+		--quote-rule: #4a3838;
+		--quote-text: #b0a8a8;
+		--row-alt: #2c2020;
+	}
+}
+
+html {
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+}
+
+html, body {
+	background-color: var(--bg);
+	font-family: "Barlow", 'Times New Roman', 'SF Pro', Times, serif;
+	color: var(--text);
+	line-height: 1.5em;
+}
+
+body {
+	margin: 0;
+}
+
+/* page container (Typora: #write) */
+main {
+	max-width: 40em;
+	margin: 0 auto;
+	padding: 1em 1.5em 3em;
+}
+
+@media only screen and (min-width: 1400px) {
+	main {
+		max-width: 914px;
+	}
+}
+
+/* lists */
+ol li {
+	list-style-type: decimal;
+	list-style-position: outside;
+}
+ul li {
+	list-style-type: disc;
+	list-style-position: outside;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+ul,
+ol {
+	margin: 0 0 1.5em 1.5em;
+}
+
+li > ul,
+li > ol {
+	margin-top: inherit;
+	margin-bottom: 0;
+}
+
+li ol > li {
+	list-style-type: lower-alpha;
+}
+
+li li ol > li {
+	list-style-type: lower-roman;
+}
+
+p + ul,
+p + ol,
+h3 + ul,
+h4 + ul,
+h5 + ul,
+h6 + ul,
+h3 + ol,
+h4 + ol,
+h5 + ol,
+h6 + ol {
+	margin-top: .5em;
+}
+
+/* headings */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	margin-bottom: 1.5em;
+}
+h1 {
+	font-size: 1.875em;
+	line-height: 1.3em;
+	font-weight: normal;
+	margin-top: 2em;
+	margin-bottom: 0.5em;
+	padding-bottom: 0.8125em;
+	border-bottom: 1px solid var(--rule);
+}
+h2,
+h3 {
+	font-size: 1.3125em;
+	line-height: 1.15;
+	margin-top: 2.285714em;
+	margin-bottom: .75em;
+}
+h3 {
+	font-weight: normal;
+}
+h4 {
+	font-size: 1.125em;
+	margin-top: 2.67em;
+}
+h5,
+h6 {
+	font-size: 1em;
+}
+
+/* links */
+a {
+	text-decoration: none;
+	color: var(--link);
+}
+a:hover,
+a:active {
+	text-decoration: underline;
+}
+
+/* block spacing */
+p,
+blockquote,
+pre {
+	margin-bottom: 1.5em;
+}
+
+/* blockquote */
+blockquote {
+	font-style: italic;
+	border-left: 5px solid var(--quote-rule);
+	color: var(--quote-text);
+	margin-left: 2em;
+	padding-left: 1em;
+}
+blockquote ul,
+blockquote ol {
+	margin-left: 0;
+}
+
+/* tables */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-bottom: 1.5em;
+	font-size: 1em;
+}
+thead th,
+tfoot th {
+	padding: .25em .25em .25em .4em;
+	text-transform: uppercase;
+}
+th {
+	text-align: left;
+}
+td {
+	vertical-align: top;
+	padding: .25em .25em .25em .4em;
+}
+thead {
+	background-color: var(--code-bg);
+}
+tr:nth-child(even) {
+	background: var(--row-alt);
+}
+
+/* code */
+code, tt, pre, kbd {
+	font-family: "Iosevka", "Lucida Console", Consolas, "Courier", monospace;
+	font-size: .875em;
+	line-height: 1.714285em;
+}
+code,
+pre {
+	background-color: var(--code-bg);
+}
+code {
+	padding-left: 2px;
+	padding-right: 2px;
+}
+pre {
+	margin-left: 2em;
+	margin-bottom: 3em;
+	padding: 0 1ch;
+	overflow-x: auto;
+}
+pre code {
+	padding: 0;
+}
+
+hr {
+	border-top: none;
+	border-right: none;
+	border-bottom: 1px solid var(--rule);
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+}
