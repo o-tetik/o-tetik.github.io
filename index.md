@@ -14,7 +14,7 @@ My wife [Tabea Tetik-Moschettini](https://kzu.ch/personen/lehrpersonen/mathemati
 
 ### AI use
 
-I'm a member of the AI-free caucus of the [Association for Human Mathematics](https://www.ahmath.org/) (AHM) since 10 Oct 2026. Here are general instructions I give right now to AI agents when I work with them: [LLM instructions](LLM-instructions-page.html). Feel free to adopt and adapt. Here is the [.md file](LLM-instructions.md).
+I'm a member of the AI-free caucus of the [Association for Human Mathematics](https://www.ahmath.org/) (AHM) since 10 Oct 2026. Here are general instructions I give right now to AI agents when I work with them: [LLM instructions](LLM-instructions-page.html). Feel free to adopt and adapt.
 
 ### Papers
 
